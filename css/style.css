@@ -348,6 +348,9 @@ body {
     font-size: var(--font-mm);
   }
 
+  #mobile_nav_background {
+    display: none;
+  }
   #main_nav {
     transition: all 01s ease;
   }

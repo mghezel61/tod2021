@@ -30,6 +30,11 @@ function toggle() {
   hamBtnSpans.forEach((span) => {
     span.classList.toggle("clicked");
   });
+  if (mainNav.classList.contains("show")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "auto";
+  }
 }
 // ###############################################
 
