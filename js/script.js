@@ -1,13 +1,15 @@
+let body = document.querySelector("body");
+let header = body.querySelector("header");
+let mobileNavBackground = body.querySelector("#mobile_nav_background");
 let hamBtn = document.querySelector("#hamburger_btn");
 let hamBtnSpans = hamBtn.querySelectorAll("span");
 let mainNav = document.querySelector("#main_nav");
 let navLinks = mainNav.querySelectorAll("a");
 let sliderToTop = document.querySelector("#scrollToTop");
-let body = document.querySelector("body");
-let header = body.querySelector("header");
 
 // toggle the navigation #########################
 hamBtn.addEventListener("click", toggle);
+mobileNavBackground.addEventListener("click", toggle);
 navLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -24,6 +26,7 @@ navLinks.forEach((link) => {
 // toggle function
 function toggle() {
   mainNav.classList.toggle("show");
+  mobileNavBackground.classList.toggle("show");
   hamBtnSpans.forEach((span) => {
     span.classList.toggle("clicked");
   });

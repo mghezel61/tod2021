@@ -60,6 +60,18 @@ body {
     transition: all 01s ease;
     left: 0;
   }
+  #mobile_nav_background {
+    position: fixed;
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    background-color: #1f2937ab;
+    height: 100%;
+    transition: 0.5s;
+  }
+  #mobile_nav_background.show {
+    top: 0px;
+  }
   #main_nav.show {
     top: 50px;
     transition: all 0.5s ease;
