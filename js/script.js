@@ -18,7 +18,7 @@ navLinks.forEach((link) => {
     let TargetSecHeight = body.querySelector(
       link.attributes[0].value
     ).offsetTop;
-    window.scroll({ top: TargetSecHeight, left: 0, behavior: "smooth" });
+    window.scrollTo({ top: TargetSecHeight, left: 0, behavior: "smooth" });
   });
 });
 // toggle function
@@ -33,7 +33,6 @@ function toggle() {
 // scroll the page to the top /TOGGLE THE NAVBAR IN DESKTOP MODE ######################
 let lastYPos = 0;
 window.addEventListener("scroll", slideTop);
-// console.log("last", lastYPos);
 function slideTop() {
   let currentScrollPos = window.scrollY;
   if (currentScrollPos > 20) {
@@ -46,9 +45,9 @@ function slideTop() {
   });
   // hide the header in Desktop mode
   if (currentScrollPos > 200) header.classList.add("hide");
+  // show the header in Desktop mode
   if (currentScrollPos < lastYPos) header.classList.remove("hide");
+  // save the last position
   lastYPos = currentScrollPos;
 }
 // ##################################################
-
-//
