@@ -313,7 +313,16 @@ body {
   header {
     min-height: 50px;
     background-color: var(--bg-primary);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 500;
+    transition: 0.5s;
   }
+  header.hide {
+    top: -60px;
+  }
+
   header .wrapper {
     display: flex;
     justify-content: space-between;
@@ -385,14 +394,10 @@ body {
     transform: translate(10px, 8px);
   }
   /* Home -------------------------------------- */
-  /* .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-  } */
   #home {
     background-color: var(--bg-primary);
     padding: 1rem;
+    margin-top: 50px;
   }
   #home .wrapper {
     padding: 1rem;
@@ -403,7 +408,7 @@ body {
 
   #hero {
     max-width: 700px;
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
   }
   /* Hero */
 
